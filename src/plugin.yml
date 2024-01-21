@@ -1,8 +1,0 @@
-main: online.lxbs.Lobby
-name: LXBSPlugin
-version: 1
-api-version: 1.13
-commands:
-  menu:
-    description: Opens a custom menu
-    usage: /menu
