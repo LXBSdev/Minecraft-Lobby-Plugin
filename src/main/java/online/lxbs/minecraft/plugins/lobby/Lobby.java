@@ -1,6 +1,7 @@
 package online.lxbs.minecraft.plugins.lobby;
 
 import online.lxbs.minecraft.plugins.lobby.commands.MenuCommand;
+import online.lxbs.minecraft.plugins.lobby.commands.StatsCommand;
 import online.lxbs.minecraft.plugins.lobby.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -10,6 +11,7 @@ public final class Lobby extends JavaPlugin {
     @Override
     public void onEnable() {
         getCommand("menu").setExecutor(new MenuCommand());
+        getCommand("stats").setExecutor(new StatsCommand());
 
         Bukkit.getPluginManager().registerEvents(new BlockInteractionsListener(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(), this);

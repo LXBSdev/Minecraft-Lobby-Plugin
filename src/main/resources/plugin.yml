@@ -7,3 +7,7 @@ commands:
     description: Open the main menu
     usage: /menu
     aliases: ["main"]
+  stats:
+    description: Open player statistics
+    usage: /stats
+    aliases: ["statistics"]

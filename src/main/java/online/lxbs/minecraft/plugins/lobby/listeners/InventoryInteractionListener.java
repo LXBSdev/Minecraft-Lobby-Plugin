@@ -1,6 +1,7 @@
 package online.lxbs.minecraft.plugins.lobby.listeners;
 
 import online.lxbs.minecraft.plugins.lobby.GUI.MenuGUI;
+import online.lxbs.minecraft.plugins.lobby.GUI.PlayerStatsGUI;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -22,7 +23,7 @@ public class InventoryInteractionListener implements Listener {
             return;
         }
         if (event.getCurrentItem().getType() == Material.PLAYER_HEAD) {
-            return;
+            player.openInventory(PlayerStatsGUI.getPlayerStatsGUI(player));
         }
         if (event.getCurrentItem().getType() == Material.COMPASS) {
             player.openInventory(MenuGUI.getMenuGUI(player));
